@@ -23,4 +23,14 @@ public class App
         }  
         return min;  
     }
+	
+	public static void throwExcep() {
+		throw new MyOwnException("My Exception!!");
+	}
+	
+	public static void timeOutExc() {
+		for (int i = 0; i < 100000; i++) {
+			//System.out.println(i);
+		}
+	}
 }

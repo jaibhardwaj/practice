@@ -9,8 +9,10 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.rules.Timeout;
 
 /*import junit.framework.Test;
 import junit.framework.TestCase;
@@ -66,4 +68,17 @@ public class AppTest {
 		assertThat("Given Number is not the Min Number!!", data, is(0));
 	}
 	
+	
+	@Test(expected=MyOwnException.class)
+	public void testException() {
+		App.throwExcep();
+	}
+	
+	@Rule
+	public Timeout timeout = new Timeout(20);
+	
+	@Test
+	public void testRuleTimeOut() {
+		App.timeOutExc();
+	}
 }
