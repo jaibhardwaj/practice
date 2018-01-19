@@ -47,7 +47,7 @@
 	<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-highlighter -->
 	<dependency>
 	    <groupId>org.apache.lucene</groupId>
-	    <artifactId>lucene-highlighter</artifactId>
+	    <artifactId>lucene-highlighter</artifactId> 
 	    <version>7.2.1</version>
 	</dependency>
 	
