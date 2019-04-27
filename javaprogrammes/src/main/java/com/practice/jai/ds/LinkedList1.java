@@ -1,7 +1,5 @@
 package com.practice.jai.ds;
 
-import com.jai.LinkedList;
-
 import java.util.HashSet;
 
 public class LinkedList1

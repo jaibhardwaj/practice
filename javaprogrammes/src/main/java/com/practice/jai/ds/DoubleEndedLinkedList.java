@@ -1,7 +1,5 @@
 package com.practice.jai.ds;
 
-import com.jai.DoublyEndedLinkedList;
-
 public class DoubleEndedLinkedList
 {
     private DoubleEndedNode head;
