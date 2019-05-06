@@ -3,7 +3,7 @@ package com.practice.jai.java;
 public class MySingletonClass
 {
     /* Early Initialization*/
-   // private static MySingletonClass mySingletonClass = new MySingletonClass();
+   // private static final MySingletonClass mySingletonClass = new MySingletonClass();
 
     /* Lazy Initialization*/
     private static MySingletonClass mySingletonClass = null;
