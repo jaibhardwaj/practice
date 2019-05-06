@@ -1,4 +1,4 @@
-package com.practice.jai.java;
+package com.practice.jai.java.singleton;
 
 public class MySingletonClass
 {
