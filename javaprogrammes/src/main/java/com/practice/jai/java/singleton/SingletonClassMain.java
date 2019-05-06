@@ -1,18 +1,9 @@
-package com.practice.jai;
-
-import com.practice.jai.java.singleton.BillPughSingelton;
-import com.practice.jai.java.singleton.EarlyLoadingUsingStaticBlockSingleton;
-import com.practice.jai.java.singleton.EnumSingleton;
-import com.practice.jai.java.singleton.MySingletonClass;
+package com.practice.jai.java.singleton;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class SingletonClassMain
 {
     public static void main( String[] args )
     {
