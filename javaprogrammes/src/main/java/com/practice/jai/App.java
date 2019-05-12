@@ -1,5 +1,6 @@
 package com.practice.jai;
 
+import com.practice.jai.java.MyImmutableClass;
 import com.practice.jai.java.singleton.BillPughSingelton;
 import com.practice.jai.java.singleton.EarlyLoadingUsingStaticBlockSingleton;
 import com.practice.jai.java.singleton.EnumSingleton;
@@ -71,5 +72,19 @@ public class App
         BillPughSingelton billPughSingelton1 = BillPughSingelton.getInstance();
         System.out.println(billPughSingelton.hashCode());
         System.out.println(billPughSingelton1.hashCode());
+
+
+        System.out.println("------------------------Immutable Class Test----------------------------------------");
+        /*
+        * Immutable Class Test
+        * */
+        MyImmutableClass myImmutableClass = new MyImmutableClass(10);
+        MyImmutableClass myImmutableClass1 = myImmutableClass.modify(20);
+        MyImmutableClass myImmutableClass2 = myImmutableClass.modify(10);
+        MyImmutableClass myImmutableClass3 =  new MyImmutableClass(10);
+        System.out.println(myImmutableClass.hashCode());
+        System.out.println(myImmutableClass1.hashCode());
+        System.out.println(myImmutableClass2.hashCode());
+        System.out.println(myImmutableClass3.hashCode());
     }
 }
