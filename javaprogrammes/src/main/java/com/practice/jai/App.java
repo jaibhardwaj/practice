@@ -1,5 +1,6 @@
 package com.practice.jai;
 
+import com.practice.jai.java.Account;
 import com.practice.jai.java.MyImmutableClass;
 import com.practice.jai.java.singleton.BillPughSingelton;
 import com.practice.jai.java.singleton.EarlyLoadingUsingStaticBlockSingleton;
@@ -8,6 +9,7 @@ import com.practice.jai.java.singleton.MySingletonClass;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.*;
 
 /**
  * Hello world!
@@ -86,5 +88,22 @@ public class App
         System.out.println(myImmutableClass1.hashCode());
         System.out.println(myImmutableClass2.hashCode());
         System.out.println(myImmutableClass3.hashCode());
+
+
+
+        Boolean b = new Boolean("");
+        HashMap<String, String> m = new HashMap<String, String>();
+        m.put("s", "k");
+        Set s = m.entrySet();
+        for (String d: m.keySet()) {
+
+        }
+        Iterator i = s.iterator();
+        while (i.hasNext())
+        {
+            Map.Entry e = (Map.Entry) i.next();
+            System.out.println(e.getKey() + "  " + e.getValue());
+        }
+        
     }
 }
