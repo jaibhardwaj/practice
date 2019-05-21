@@ -1,6 +1,5 @@
 package com.practice.jai;
 
-import com.practice.jai.java.Account;
 import com.practice.jai.java.MyImmutableClass;
 import com.practice.jai.java.singleton.BillPughSingelton;
 import com.practice.jai.java.singleton.EarlyLoadingUsingStaticBlockSingleton;
@@ -17,7 +16,8 @@ import java.util.*;
  */
 public class App 
 {
-    public static void main( String[] args )
+
+    public static void main(String[] args )
     {
         /*
         1) Early Loading
@@ -104,6 +104,34 @@ public class App
             Map.Entry e = (Map.Entry) i.next();
             System.out.println(e.getKey() + "  " + e.getValue());
         }
-        
+
+        LinkedHashSet linkedHashSet = new LinkedHashSet();
+        //TreeSet<Employee> treeSet = new TreeSet((i1, i2) -> (i1.getId() < i2.getId()) ? -1 : (i1.getId() > i2.getId()) ? 1 : 0);
+
+        Integer i1 = new Integer(10);
+        Integer i2 = new Integer(10);
+        HashMap map = new HashMap();
+        map.put(i1, "Jai");
+        map.put(i2, "ki");
+        System.out.println(map);
+
+        WeakHashMap map1 = new WeakHashMap();
+        String s1 = new String("Jai");
+        map1.put(s1, "Kri");
+        System.out.println(map1);
+        s1 = null;
+        System.gc();
+        System.out.println(map1);
+
+
+
+        Hashtable<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(5, "A");
+        hashtable.put(13, "B");
+        hashtable.put(3, "C");
+        hashtable.put(12, "D");
+        hashtable.put(16, "D");
+
+
     }
 }
