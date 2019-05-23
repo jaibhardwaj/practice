@@ -29,6 +29,7 @@ public class CollectionTest
         map.put("5", "iiii");
         map.printMap();
 
+        System.out.println(map.get("84"));
 
     }
 }

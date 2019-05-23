@@ -1,10 +1,10 @@
 package com.practice.jai.java.threading;
 
-public class MyThread1 extends Thread
+public class MyThread2 extends Thread
 {
     private final PrintCount printCount;
 
-    public MyThread1(PrintCount printCount)
+    public MyThread2(PrintCount printCount)
     {
         this.printCount = printCount;
     }
@@ -13,18 +13,14 @@ public class MyThread1 extends Thread
     {
         synchronized (printCount)
         {
-            //System.out.println(printCount.getCount());
-            System.out.println("MyThread got Notification...");
-            //printCount.incrementCount();
-            System.out.println("Notifying to Main...");
+            /*System.out.println(printCount.getCount());
+            printCount.incrementCount();*/
             printCount.notify();
-            /*printCount.notify();
             try {
                 printCount.wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            }*/
-
+            }
         }
     }
 }
