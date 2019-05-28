@@ -49,6 +49,9 @@ public class ThreadMain
         Thread t2 = new Thread(new TaskEvenOdd(10, true, printCount), "Even");
         t1.start();
         t2.start();
+        t1.setUncaughtExceptionHandler((t, e) -> {
+
+        });
 
     }
 }

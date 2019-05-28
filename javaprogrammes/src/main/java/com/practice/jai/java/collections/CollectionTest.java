@@ -31,5 +31,22 @@ public class CollectionTest
 
         System.out.println(map.get("84"));
 
+        MyBlockingQueue queue = new MyBlockingQueue();
+        queue.enqeue("a1");
+        queue.enqeue("a2");
+        queue.enqeue("a3");
+        queue.enqeue("a4");
+        queue.enqeue("a5");
+        queue.enqeue("a6");
+        queue.enqeue("a7");
+        queue.enqeue("a8");
+        queue.enqeue("a9");
+        queue.enqeue("a10");
+        new Thread(() -> queue.enqeue("jai")).start();
+        new Thread(() -> queue.deqeue()).start();
+
+        System.out.println(queue);
+
+
     }
 }
