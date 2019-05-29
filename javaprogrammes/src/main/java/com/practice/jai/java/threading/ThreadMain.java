@@ -1,5 +1,7 @@
 package com.practice.jai.java.threading;
 
+import java.util.concurrent.Semaphore;
+
 public class ThreadMain
 {
     public static void main(String[] args) throws InterruptedException
@@ -44,9 +46,21 @@ public class ThreadMain
         /*
          * Print Even Odd using Two Thread
          * */
-        PrintCount printCount = new PrintCount();
+        /*PrintCount printCount = new PrintCount();
         Thread t1 = new Thread(new TaskEvenOdd(10, false, printCount),"Odd");
         Thread t2 = new Thread(new TaskEvenOdd(10, true, printCount), "Even");
+        t1.start();
+        t2.start();*/
+
+
+
+        /*
+        * Using Semaphore
+        * */
+        Semaphore semaphore = new Semaphore(1);
+        PrintNumber printCount = new PrintNumber(semaphore);
+        Thread t1 = new Thread(new TaskEvenOddSem(semaphore, printCount, false, 10),"Odd");
+        Thread t2 = new Thread(new TaskEvenOddSem(semaphore, printCount, true, 10), "Even");
         t1.start();
         t2.start();
         t1.setUncaughtExceptionHandler((t, e) -> {
