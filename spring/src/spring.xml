@@ -104,13 +104,13 @@
 
 
     <!-- Real Dependency Injection example using Bean Definition Inheritance -->
-    <context:component-scan base-package="com.jai.*"/>
-    <!--<context:annotation-config/>-->
+    <context:component-scan base-package="com.jai.practice"/>
+    <context:annotation-config/>
     <context:property-placeholder location="classpath:value.properties"/>
     <bean class="com.jai.practice.basics.MyPostProcesser" />
     <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
 
-    <!--<bean id="parentTriangle" class="com.jai.practice.basics.NewTriangle" abstract="true">
+    <bean id="parentTriangle" class="com.jai.practice.basics.NewTriangle" abstract="true">
         <property name="pointA" ref="pointA"/>
     </bean>
 
@@ -130,7 +130,7 @@
     <bean id="pointC" class="com.jai.practice.basics.Point">
         <property name="x" value="50"/>
         <property name="y" value="60"/>
-    </bean>-->
+    </bean>
 
     <bean id="center" class="com.jai.practice.basics.Point">
         <property name="x" value="0"/>
