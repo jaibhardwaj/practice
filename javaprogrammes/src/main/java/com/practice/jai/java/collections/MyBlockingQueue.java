@@ -40,7 +40,7 @@ public class MyBlockingQueue {
         System.out.println("Enqueued: "+ s);
     }
 
-    public synchronized void deqeue()
+    public synchronized String deqeue()
     {
         while (isEmpty())
         {
@@ -57,6 +57,7 @@ public class MyBlockingQueue {
         notify();
 
         System.out.println("Dequeued: "+ s);
+        return s;
     }
 
     @Override

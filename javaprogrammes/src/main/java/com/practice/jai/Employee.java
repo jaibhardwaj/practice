@@ -84,4 +84,17 @@ public class Employee {
                 ", department=" + department +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj)
+            return true;
+        Employee e = (Employee) obj;
+        return this.name.length() == e.name.length();
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }

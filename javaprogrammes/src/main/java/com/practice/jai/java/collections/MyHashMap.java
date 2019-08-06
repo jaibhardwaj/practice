@@ -21,7 +21,10 @@ public class MyHashMap
         Node newNode = new Node(hash(key), key, value, null);
         if(table[index] == null)
         {
-            table[index] = newNode;
+            synchronized (table[index])
+            {
+                table[index] = newNode;
+            }
         }
         else {
             String val = getValueOfNode(table[index], newNode);

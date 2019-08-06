@@ -9,6 +9,7 @@ import com.practice.jai.java.singleton.MySingletonClass;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Hello world!
@@ -122,6 +123,9 @@ public class App
         s1 = null;
         System.gc();
         System.out.println(map1);
+        //LinkedHashSet
+        //ConcurrentHashMap
+        //Thread
 
 
 
@@ -131,6 +135,13 @@ public class App
         hashtable.put(3, "C");
         hashtable.put(12, "D");
         hashtable.put(16, "D");
+
+
+        Set<Employee> em = new HashSet<>();
+        em.add(new Employee(1, "jai", 20, "fbd", "ind", new Department("IT")));
+        em.add(new Employee(1, "jai", 20, "fbd", "ind", new Department("IT")));
+        System.out.println(em);
+        System.out.println(em.contains(new Employee(1, "jai", 20, "fbd", "ind", new Department("IT"))));
 
 
     }

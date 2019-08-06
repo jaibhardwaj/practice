@@ -37,7 +37,7 @@ public class TestJava
         schemasList1.put("version", versionList1);
         List<Map<String, Object>> schemas1 = new ArrayList<>();
         schemas1.add(schemasList1);
-
+        schemas1.stream()
         schemaNameSpaceMap1.put("schemaNameSpace", "NameSpace1");
         schemaNameSpaceMap1.put("schemas", schemas1);
 
