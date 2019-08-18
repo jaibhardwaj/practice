@@ -129,6 +129,29 @@ public class LinkedList1
         return this;
     }
 
+    public int middleElement()
+    {
+        int length= 1;
+        Node ptr1 = head;
+        Node ptr2 = head;
+        while (ptr2 != null && ptr2.getNextNode() != null)
+        {
+            length++;
+            ptr1 = ptr1.getNextNode();
+            ptr2 = ptr2.getNextNode().getNextNode();
+        }
+        if(ptr2 == null)
+        {
+            length = (length - 1) * 2;
+        }
+        else
+        {
+            length = (length * 2 ) - 1;
+        }
+        System.out.println("Length:- "+ length);
+        return ptr1.getData();
+    }
+
     @Override
     public String toString()
     {

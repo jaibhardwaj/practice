@@ -17,6 +17,8 @@ public class TestMainClass
         linkedList1.addElement(2);
         linkedList1.addElement(1);
 
+        System.out.println(linkedList1.middleElement());
+
         System.out.println("Linked List:- "+linkedList1);
 
         linkedList1.insertAtSortedList(6);
