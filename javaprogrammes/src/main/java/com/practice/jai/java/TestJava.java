@@ -60,6 +60,5 @@ public class TestJava
 
         String jsonObject2 = new Gson().toJson(schemasObject);
         System.out.println(jsonObject2);
-
     }
 }
