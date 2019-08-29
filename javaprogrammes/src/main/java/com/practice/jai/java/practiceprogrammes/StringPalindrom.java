@@ -9,6 +9,7 @@ public class StringPalindrom
         /*System.out.println(reverseString("krishan"));
         System.out.println(isPalindrome("jai"));
         System.out.println(recursiveReverseString("jai"));*/
+        System.out.println(recursiveReverseString("jai"));
     }
 
     public static String reverseString(String string)

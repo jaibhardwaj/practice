@@ -17,9 +17,6 @@ public class StringPractice
         String s2 = s1.intern();
         System.out.println(s1 == s2);	//false
         String s3 = "durga";
-        Future
-        ExecutorService
         System.out.println(s2 == s3);	//true
-        Executors
     }
 }

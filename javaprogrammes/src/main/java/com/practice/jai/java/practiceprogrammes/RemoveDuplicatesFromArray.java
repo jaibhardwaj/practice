@@ -4,13 +4,15 @@ public class RemoveDuplicatesFromArray
 {
     public static void main(String[] args)
     {
-        /*printArray(removeDuplicate(new int[]{1, 2, 2, 4, 3, 4, 5}));
-        printArray(removeDuplicateUsingArray(new int[]{1, 2, 2, 3, 3, 4, 5}));*/
-        int[] arr = {1, 2, 2, 3, 3, 4, 5};
+        /*printArray(removeDuplicate(new int[]{1, 2, 2, 4, 3, 4, 5}));*/
+        printArray(removeDuplicateUsingArray(new int[]{1, 2, 2, 3, 3, 4, 5}));
+        /*int[] arr = {1, 2, 2, 3, 3, 4, 5};
         int length = removeDuplicateElements(arr, arr.length);
-        for (int i=0; i<length; i++)
-            System.out.print(arr[i]+" ");
+        for (int i=0; i<length; i++) {
+            System.out.print(arr[i] + " ");
+        }*/
     }
+
 
     public static int[] removeDuplicate(int[] arr)
     {
@@ -33,15 +35,27 @@ public class RemoveDuplicatesFromArray
     /* only works on sorted array*/
     public static int[] removeDuplicateUsingArray(int[] arr)
     {
+        /*int[] result = new int[arr.length];
+        result[0]= arr[0];
+        int j = 0;
+        for (int i = 0; i < arr.length; i++)
+        {
+            if(result[j] != arr[i])
+            {
+                j++;
+                result[j] = arr[i];
+            }
+        }*/
+
+
         int[] result = new int[arr.length];
         int previous = arr[0];
         result[0] = previous;
 
-        for (int i = 1; i < arr.length; i++)
-        {
+        for (int i = 1; i < arr.length; i++) {
             int ch = arr[i];
-            if(previous != ch)
-            {
+
+            if (previous != ch) {
                 result[i] = ch;
             }
             previous = ch;
