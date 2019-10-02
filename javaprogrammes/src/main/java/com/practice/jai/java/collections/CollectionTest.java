@@ -1,15 +1,12 @@
 package com.practice.jai.java.collections;
 
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Vector;
+import java.util.*;
 
 public class CollectionTest
 {
     public static void main(String[] args)
     {
-        Vector<String> v = new Vector<String>();
+        /*Vector<String> v = new Vector<String>();
         v.add("jai");
         v.add("Kri");
         Enumeration e = v.elements();
@@ -45,8 +42,15 @@ public class CollectionTest
         new Thread(() -> queue.enqeue("jai")).start();
         new Thread(() -> queue.deqeue()).start();
 
-        System.out.println(queue);
+        System.out.println(queue);*/
 
 
+        MyHashMap2<String, String> m2 = new MyHashMap2<>(10);
+        for (int i = 0; i < 50; i++)
+        {
+            m2.put("a" + i, "b" + i);
+        }
+        System.out.println(m2);
+        System.out.println(m2.get("a5"));
     }
 }

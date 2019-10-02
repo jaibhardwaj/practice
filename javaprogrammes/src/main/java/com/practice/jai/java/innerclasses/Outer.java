@@ -12,6 +12,14 @@ public class Outer
         }
     }
 
+    static class StaticInner
+    {
+        public void m1()
+        {
+            System.out.println("Static Inner Method");
+        }
+    }
+
     public static void main(String[] args)
     {
         new Outer().new Inner().test();
@@ -24,6 +32,22 @@ public class Outer
         };
 
         Thread t = new Thread(r);
+
+        StaticInner i =  new StaticInner();
+        Outer.Inner inner = new Outer().new Inner();
+        i.m1();
+
+    }
+}
+
+class Mt
+{
+    public static void main(String[] args) {
+        Outer.StaticInner st = new Outer.StaticInner();
+        st.m1();
+
+        Outer.Inner inner = new Outer().new Inner();
+        inner.test();
 
     }
 }

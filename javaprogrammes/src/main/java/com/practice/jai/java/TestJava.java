@@ -4,11 +4,22 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.*;
 
 public class TestJava
 {
+    public TestJava(int j)
+    {
+        super();
+        int i = 0;
+
+    }
+    public TestJava()
+    {
+        int i = 0;
+    }
     public static void main(String[] args)
     {
         Map<String, Map<String, List<String>>> map = new HashMap<>();
@@ -60,5 +71,43 @@ public class TestJava
 
         String jsonObject2 = new Gson().toJson(schemasObject);
         System.out.println(jsonObject2);
+
+        TestJava testJava = new TestJava();
+        Class aClass = testJava.getClass();
     }
+}
+
+class A1
+{
+    A1() throws IOException
+    {
+        this(2);
+    }
+    A1(int i) throws IOException
+    {
+    }
+    public void m1() throws Exception
+    {}
+}
+class B extends A1
+{
+    B() throws Exception
+    {
+        super();
+    }
+    public void m1() throws  IOException
+    {}
+}
+
+class MyCassLoader extends ClassLoader
+{
+    @Override
+    public Class<?> loadClass(String name) throws ClassNotFoundException
+    {
+        Class<?> aClass = loadClass(name, true);
+
+        return aClass;
+
+    }
+
 }
