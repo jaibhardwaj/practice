@@ -17,11 +17,13 @@ public class TestMainClass
         linkedList1.addElement(2);
         linkedList1.addElement(1);
 
-        System.out.println("Middle Element:- "+linkedList1.middleElement());
+        //System.out.println("Middle Element:- "+linkedList1.middleElement());
+
+        System.out.println("Kth Node from Tail :- " + linkedList1.kthNodeFromTail(1));
 
         System.out.println("Linked List:- "+linkedList1);
 
-        linkedList1.insertAtSortedList(6);
+        /*linkedList1.insertAtSortedList(6);
         linkedList1.insertAtSortedList(0);
 
         System.out.println("Data added Sorted Linked List:- "+linkedList1);
@@ -50,7 +52,7 @@ public class TestMainClass
 
 
 
-        /********* Doubly Linked List *************/
+        *//********* Doubly Linked List *************//*
         DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
         doublyLinkedList.addElement(7);
         doublyLinkedList.addElement(5);
@@ -74,7 +76,7 @@ public class TestMainClass
 
 
 
-        /********* Double Ended Linked List *************/
+        *//********* Double Ended Linked List *************//*
         DoubleEndedLinkedList doubleEndedLinkedList = new DoubleEndedLinkedList();
         doubleEndedLinkedList.addElementAtHead(5);
         doubleEndedLinkedList.addElementAtHead(2);
@@ -106,7 +108,7 @@ public class TestMainClass
 
 
 
-        /********* Circular Linked List *************/
+        *//********* Circular Linked List *************//*
         CircularLinkedList circularLinkedList = new CircularLinkedList();
         circularLinkedList.addElementAtHead(5);
         circularLinkedList.addElementAtHead(2);
@@ -128,7 +130,7 @@ public class TestMainClass
 
 
 
-        /********* Stack Using Linked List *************/
+        *//********* Stack Using Linked List *************//*
 
         StackUsingLinkedList stackUsingLinkedList = new StackUsingLinkedList();
         stackUsingLinkedList.push(5);
@@ -145,7 +147,7 @@ public class TestMainClass
 
 
 
-        /********* Stack Using Array *************/
+        *//********* Stack Using Array *************//*
 
         StackUsingArray stackUsingArray = new StackUsingArray();
         stackUsingArray.push(1);
@@ -168,7 +170,7 @@ public class TestMainClass
         System.out.println("Stack Using Array Peek: - " + stackUsingArray.peek());
 
 
-        /********* Queue Using Linked List *************/
+        *//********* Queue Using Linked List *************//*
 
         QueueUsingLinkedList queueUsingLinkedList = new QueueUsingLinkedList();
         queueUsingLinkedList.add(1);
@@ -184,7 +186,7 @@ public class TestMainClass
         System.out.println("Queue Using LinkedList After Remove: - " + queueUsingLinkedList);
 
 
-        /********* Queue Using Array *************/
+        *//********* Queue Using Array *************//*
 
         QueueUsingArray queueUsingArray = new QueueUsingArray();
         queueUsingArray.add(1);
@@ -197,7 +199,7 @@ public class TestMainClass
         System.out.println("Queue Using Array: - " + queueUsingArray);
         queueUsingArray.remove();
         queueUsingArray.remove();
-        System.out.println("Queue Using Array After Remove: - " + queueUsingArray);
+        System.out.println("Queue Using Array After Remove: - " + queueUsingArray);*/
 
 
 

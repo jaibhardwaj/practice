@@ -152,6 +152,24 @@ public class LinkedList1
         return ptr1.getData();
     }
 
+    public int kthNodeFromTail(int kthNode)
+    {
+        Node slow = head;
+        Node fast = head;
+        int count = 1;
+        while (slow != null && fast != null)
+        {
+            if(count > kthNode)
+            {
+                slow = slow.getNextNode();
+            }
+            fast = fast.getNextNode();
+            count++;
+        }
+
+        return slow.getData();
+    }
+
     @Override
     public String toString()
     {
