@@ -1,6 +1,7 @@
 package com.practice.jai.ds;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class LinkedList1
 {
@@ -169,6 +170,61 @@ public class LinkedList1
 
         return slow.getData();
     }
+
+    /*
+    * To Remove Duplicate elements from LinkedList
+    * */
+    public void removeDuplicate()
+    {
+        Node current = head;
+        Node previous = null;
+        Set<Integer> set = new HashSet<>();
+        while (current != null)
+        {
+            int data = current.getData();
+            if(set.contains(data))
+            {
+                previous.setNextNode(current.getNextNode());
+            }
+            else
+            {
+                set.add(data);
+                previous = current;
+            }
+            current = current.getNextNode();
+        }
+    }
+
+    public void isCircular()
+    {
+        Node ptr1 = head;
+        Node ptr2 = head;
+        while (ptr1 != null && ptr1.getNextNode() != null && ptr2 != null && ptr2.getNextNode() != null)
+        {
+            ptr1 = ptr1.getNextNode();
+            ptr2 = ptr2.getNextNode().getNextNode();
+            if(ptr1 == ptr2)
+            {
+                System.out.println("Linked List is Circular!");
+                break;
+            }
+        }
+        System.out.println("Removing circular !!");
+        ptr1 = head;
+        while (true)
+        {
+            if(ptr2.getNextNode() != ptr1 && ptr2.getNextNode() != ptr2)
+            {
+                ptr2 = ptr2.getNextNode();
+            }
+            if(ptr2.getNextNode() == ptr1)
+            {
+                break;
+            }
+        }
+        ptr2.setNextNode(null);
+    }
+
 
     @Override
     public String toString()

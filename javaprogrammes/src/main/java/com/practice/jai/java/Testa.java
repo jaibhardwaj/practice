@@ -2,10 +2,23 @@ package com.practice.jai.java;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class Testa
 {
-    public static void main(String[] args) {
+    static int x =10;
+    Testa()
+    {
+        this(10);
+    }
+    Testa(int i)
+    {
+        super();
+    }
+    public static void main(String[] args)
+    {
+        Testa ta = new Testa();
+        ta.x =10;
         System.out.println(ME.KC.getValue());
         System.out.println(ME.KC.getUUid());
         ME me1 = ME.KC;
@@ -50,3 +63,94 @@ class Test<T>
         return l.get(index);
     }
 }
+
+enum Day
+{
+    JAN, FEB(100);
+
+    Day()
+    {
+        System.out.println("NO");
+    }
+
+    Day(int i)
+    {
+        System.out.println("YES");
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(JAN);
+        MyG<String,String,String> mg = new MyG<>();
+        mg.m1("a");
+    }
+}
+
+class MyG<A, B, C>
+{
+    public void m1(A a)
+    {
+        System.out.println(a);
+    }
+}
+
+class StaticInner
+{
+    static class SInner
+    {
+        public void m1()
+        {
+            System.out.println("SS");
+        }
+    }
+
+    class NInner
+    {
+        public void m1()
+        {
+            System.out.println("dd");
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        StaticInner s  = new StaticInner();
+        StaticInner.SInner si = new StaticInner.SInner();
+        StaticInner.NInner sn = new StaticInner().new NInner();
+    }
+}
+
+abstract class AT
+{
+    public static void ma()
+    {
+
+    }
+}
+
+interface P
+{
+    void m1();
+}
+interface Q extends P
+{
+    void m2();
+    default void m3()
+    {
+        m1();
+    }
+}
+
+class TR implements Q
+{
+    @Override public void m2()
+    {
+
+    }
+
+    @Override public void m1()
+    {
+
+    }
+}
+

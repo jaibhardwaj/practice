@@ -13,10 +13,14 @@ public class MYSerializedClass implements Serializable
     public static void main(String[] args) throws IOException, ClassNotFoundException
     {
         MYSerializedClass mySerializedClass = new MYSerializedClass();
+        Class<MYSerializedClass> mySerializedClassClass = MYSerializedClass.class;
+        Class<? extends MYSerializedClass> aClass = mySerializedClass.getClass();
+
         System.out.println(mySerializedClass.name + " " + mySerializedClass.password);
         FileOutputStream fos = new FileOutputStream("xyz.ser");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(mySerializedClass);
+        System.out.println("Deserialization Started");
 
         FileInputStream fis = new FileInputStream("xyz.ser");
         ObjectInputStream ois = new ObjectInputStream(fis);
@@ -59,7 +63,7 @@ class MyCustomSerClass implements Externalizable
         FileOutputStream fos = new FileOutputStream("exter.ser");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(c);
-
+        System.out.println("Deserialization Started");
         FileInputStream fis = new FileInputStream("exter.ser");
         ObjectInputStream ois = new ObjectInputStream(fis);
         MyCustomSerClass c1 = (MyCustomSerClass) ois.readObject();

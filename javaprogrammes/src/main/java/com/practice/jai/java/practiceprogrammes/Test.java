@@ -33,7 +33,7 @@ public class Test
         }*//*
         System.out.printf("Missing Value:- " + missingValue);*/
 
-        HashMap<Integer, Integer> map1 = new HashMap<>();
+        /*HashMap<Integer, Integer> map1 = new HashMap<>();
         int[] arr3 = {1,2,2,3,4,5,6,7,7};
         for (int i = 0; i < arr3.length; i++)
         {
@@ -47,6 +47,10 @@ public class Test
             }
         }
 
-        System.out.println(map1);
+        System.out.println(map1);*/
+
+        Student s = Student.StudentBuilder.newBuilder().setId(2).build();
+        System.out.println(s.getId());
+
     }
 }
