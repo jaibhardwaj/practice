@@ -1,0 +1,30 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Employee Details</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="hello.js"></script>
+	</head>
+
+	<body>
+	<h1>HELLO</h1>
+		<div ng-controller="Hello">
+			 <table>
+	            <tr>
+	                <th>Name</th>
+	                <th>Id</th>
+	                <th>Country</th>
+	            </tr>
+	 
+	            <tr ng-repeat="employee in employees">
+	                <td>{{employee.name}}</td>
+	                <td>{{employee.id}}</td>
+	                <td>{{employee.country}}</td>
+	            </tr>
+ 
+       		 </table>
+			 <button ng-click="getRequest()">see All</button>	
+		</div>
+	</body>
+</html>
