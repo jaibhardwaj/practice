@@ -1,7 +1,5 @@
 package com.practice.jai.java;
 
-import java.util.concurrent.*;
-
 public class StringPractice
 {
     public static void main(String[] args)

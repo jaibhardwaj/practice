@@ -21,7 +21,14 @@ public class SelectionSort
             swap(i, minIndex, arr);
         }
 
-        printArray(arr);
+        //printArray(arr);
+
+        String a = new String("jai");
+        String b = a.intern();
+        System.out.println(a == b);
+        String c = "jai";
+        System.out.println(c == b);
+
     }
 
     public static void swap(int i, int j, int[] arr)
